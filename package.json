@@ -1,0 +1,18 @@
+{
+  "name": "hangman-cli",
+  "version": "1.0.0",
+  "description": "hangman command-line game",
+  "main": "hangmanCli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "hangman-cli"
+  },
+  "author": "Stefany Dos Santos",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^5.0.0"
+  }
+}
