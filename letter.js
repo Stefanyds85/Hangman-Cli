@@ -1,13 +1,29 @@
-function LetterOptions(letters) {
-    
-    const {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z} = letters;
+const Letters = function (letterSpecs) {
 
-    this.a = a;
-    this.b = b;
-    this.c = c;
-    this.d = d;
-    this.e = e;
-    this.f = f;
-    this.g = g;
-};
-module.exports = LetterOptions;
+    this.letterpick = letterpick;
+    this.placeholder = placeholder;
+    this.playerguesses = playerguesses;
+}
+var letters = [];
+var letterpick = [];
+var placeholder = '_';
+var playerguesses = false
+var loop = 0
+
+var getLetters = function(loop){
+    console.log(loop);
+    if (loop < 10){
+        inquirer.prompt({
+            name: "Enter a letter",
+            message: "pick a letter!!"
+        }).then(function(answers){
+            letters.push(answers.letters);
+            loop++;
+            getLetters(loop);
+        })
+    }
+
+}
+
+getLetters(loop);
+module.exports = Letters;
